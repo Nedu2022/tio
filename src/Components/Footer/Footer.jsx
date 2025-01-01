@@ -1,4 +1,4 @@
-import { FiFacebook, FiTwitter, FiInstagram } from 'react-icons/fi'; // Social media icons
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'; 
 
 const Footer = () => {
   return (
@@ -65,7 +65,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-accentTeal transition-all duration-300"
             >
-              <FiFacebook className="text-2xl" />
+              <FaFacebook className="text-2xl" />
             </a>
             <a
               href="https://twitter.com"
@@ -73,7 +73,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-accentTeal transition-all duration-300"
             >
-              <FiTwitter className="text-2xl" />
+              <FaTwitter className="text-2xl" />
             </a>
             <a
               href="https://instagram.com"
@@ -81,7 +81,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-accentTeal transition-all duration-300"
             >
-              <FiInstagram className="text-2xl" />
+              <FaInstagram className="text-2xl" />
             </a>
           </div>
         </div>

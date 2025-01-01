@@ -1,6 +1,7 @@
 import peaceImage from "../../assets/peace.jpg";
 import { FiArrowRight } from "react-icons/fi";
 
+
 const Hero = () => {
   return (
     <>
@@ -18,10 +19,10 @@ const Hero = () => {
         ></div>
         {/* Content */}
         <div className="relative flex flex-col items-start justify-center h-full px-8 lg:px-16 text-left">
-          <h1 className="font-sac text-5xl md:text-2xl lg:text-4xl text-primaryPink">
+          <h1 className="font-sac font-bold lg:text-5xl text-2xl text-primaryPink">
             Talk It Out With Betty
           </h1>
-          <p className="mt-4 text-sm md:text-md lg:text-xs text-neutralGray pl-10">
+          <p className="mt-4 text-sm md:text-md lg:text-xs text-neutralGray pl-3">
             Discover the tools to navigate life's challenges with personalized
             guidance and support.
           </p>
