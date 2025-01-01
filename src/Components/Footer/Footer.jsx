@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* About Section */}
         <div>
-          <h2 className="font-body text-lg text-accentGold mb-4">About Us</h2>
+          <h2 className="font-body text-lg text-primaryPink mb-4">About Us</h2>
           <p className="text-sm font-body text-primaryBeige leading-relaxed">
             We’re here to help you find clarity and peace. Our counseling platform is built to guide
             you through life’s challenges with compassion and care.
@@ -15,7 +15,7 @@ const Footer = () => {
 
         {/* Quick Links Section */}
         <div>
-          <h2 className="font-body text-lg text-accentGold mb-4">Quick Links</h2>
+          <h2 className="font-body text-lg text-primaryPink mb-4">Quick Links</h2>
           <ul className="space-y-2">
             <li>
               <a
@@ -54,7 +54,7 @@ const Footer = () => {
 
         {/* Social Media Section */}
         <div>
-          <h2 className="font-body text-lg text-accentGold mb-4">Connect With Us</h2>
+          <h2 className="font-body text-lg text-primaryPink mb-4">Connect With Us</h2>
           <p className="text-sm text-primaryBeige mb-4 font-body leading-relaxed">
             Follow us on social media to stay updated and inspired.
           </p>

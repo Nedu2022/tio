@@ -9,11 +9,12 @@ export default {
       sac: ["Sacramento", "cursive"],
     },
     screens: {
-      sm: "320px",
-      md: "480px",
-      lg: "768px",
-      xl: "1024px",
-      "2xl": "1200px",
+        sm: "640px",  // Small screens (mobile)
+        md: "768px",  // Medium screens (tablets)
+        lg: "1024px", // Large screens (desktops)
+        xl: "1280px", // Extra-large screens
+        "2xl": "1536px", // Ultra-wide screens
+      
     },
     extend: {
       keyframes: {
@@ -38,16 +39,13 @@ export default {
         '6xl': '96px',
       },
       colors: {
-        primaryPink: '#DDB7B9', // Soft pink
+        primaryPink: '#F5A19C', // Soft pink
         primaryBeige: '#F2EDE8', // Beige
         accentGold: '#F4C95D',   // Gold
-        accentTeal: '#82C4C3',   
         neutralGray: '#333333',  // Charcoal Gray
         backgroundGray: '#F0F0F0', // Light gray for backgrounds
         white: '#FFFFFF',        // White for text or highlights
         softBlush: '#F8D7DA',    // Light pink for subtle highlights
-        mutedCoral: '#F5A19C',   // Warm coral
-        sageGreen: '#BFCBA8',    // Organic green tone
       },
     },
   },
