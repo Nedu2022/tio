@@ -36,17 +36,17 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-around items-center h-auto lg:h-72 lg:px-28">
+      <div className="flex flex-col lg:flex-row justify-around items-center h-[25rem] lg:px-18 p-3">
   {/* Left Section */}
-  <span className="w-full lg:w-3/5 text-center lg:text-left mb-6 lg:mb-0">
-    <h2 className="text-lg sm:text-xl lg:text-2xl">
+  <span className="w-full text-center lg:text-left mb-6 lg:mb-0">
+    <h2 className="text-left lg:text-center text-lg sm:text-xl lg:text-3xl sm:pt-10">
       Take The First Step Towards <br /> A Balanced & Fulfilling Life.
     </h2>
   </span>
 
   {/* Right Section */}
-  <span className="flex flex-col text-neutralGray w-full lg:w-2/5">
-    <p className="text-sm text-center lg:text-left">
+  <span className="flex flex-col text-neutralGray w-fit pr-10 ">
+    <p className="text-sm lg:text-center text-left">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius iusto
       voluptates, necessitatibus nostrum quibusdam vero reprehenderit
     </p>
@@ -54,17 +54,15 @@ const Hero = () => {
     {/* Horizontal Line */}
     <div className="w-full h-0.5 bg-primaryPink my-4 mx-auto lg:mx-0"></div>
 
-    <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center">
+    <div className="flex flex-col lg:flex-row justify-center lg:justify-between lg:items-center">
       {/* Button */}
-      <button className="flex items-center w-full lg:w-48 mt-4 px-10 py-2 bg-primaryPink text-white rounded-3xl hover:bg-mutedCoral mb-4 lg:mb-0">
-        <p>
-          Book a <br /> Consultation
-        </p>
-        <FiArrowRight className="text-accentTeal text-xl hover:text-mutedCoral ml-2" />
-      </button>
+      <a className="flex w-fit mt-4 px-10 py-3 bg-primaryPink text-white rounded-3xl hover:bg-mutedCoral mb-4 lg:mb-0">
+          Book a Consultation
+        <FiArrowRight className="text-accentTeal text-lg hover:text-mutedCoral ml-2" />
+      </a>
 
       {/* Contact Info */}
-      <p className="text-center lg:text-left">
+      <p className="lg:text-center text-left">
         Or Call Us: <span className="font-bold">1-555-678-8888</span>
       </p>
     </div>
