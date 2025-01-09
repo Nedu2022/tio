@@ -1,105 +1,138 @@
 import { useState } from "react";
 import { ChevronDown, ChevronRight } from "react-feather";
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'; 
+import { LuCircleUserRound } from "react-icons/lu";
+import tLogo from "../../assets/TIO-logo.png";
 
 const Header = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isBookingsOpen, setIsBookingsOpen] = useState(false);
 
+  const [hoveredItem, setHoveredItem] = useState(null);
+
+  const handleMouseEnter = (item) => {
+    setHoveredItem(item);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
+  };
+
   return (
-    <header className="bg-white w-full shadow-md fixed top-0 z-[1000]">
-      <div className="max-w-6xl mx-auto px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-lato text-neutralGray">T. I. O</h1>
+    <header className="text-primaryBeige w-full fixed top-0 z-[1000]">
+      <div className="px-8">
+        <div className="flex items-center mx-14 justify-between h-20">
+        
+          <div className="flex flex-row items-center">
+          <img src={tLogo} alt="Logo" className="h-24" />
+            <h1 className="text-2xl font-lato text-primaryBeige font-bold">T. I. O</h1>
           </div>
 
           {/* Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <a
-              href="#"
-              className="font-medium text-neutralGray transition-colors duration-200 px-4 py-2 rounded-md hover:bg-softBlush"
-            >
-              About
-            </a>
+          <div className="hidden lg:flex items-center space-x-8 opacity-100">
+      {/* Navigation Items */}
+      <a
+        href="#"
+        className={`font-medium transition-colors duration-200 px-4 py-2 ${
+          hoveredItem && hoveredItem !== "whyTalkItOut" ? "opacity-50" : "opacity-100"
+        }`}
+        onMouseEnter={() => handleMouseEnter("whyTalkItOut")}
+        onMouseLeave={handleMouseLeave}
+      >
+        Why Talk It Out?
+      </a>
 
-            {/* Bookings Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              <button className="flex items-center space-x-1 font-medium transition-colors duration-300">
-                <span className="text-neutralGray">Bookings</span>
-                <span
-                  className={`transition-transform duration-500 ease-in-out ${
-                    isHovered ? "rotate-90" : "rotate-0"
-                  }`}
-                >
-                  {isHovered ? (
-                    <ChevronRight className="h-4 w-4 text-neutralGray" />
-                  ) : (
-                    <ChevronDown className="h-4 w-4 text-neutralGray" />
-                  )}
-                </span>
-              </button>
+      {/* Bookings Dropdown */}
+      <div
+        className={`relative ${
+          hoveredItem && hoveredItem !== "bookings" ? "opacity-50" : "opacity-100"
+        }`}
+        onMouseEnter={() => handleMouseEnter("bookings")}
+        onMouseLeave={handleMouseLeave}
+      >
+        <button className="flex items-center space-x-1 font-medium transition-colors duration-300">
+          <span>Bookings</span>
+          <span
+            className={`transition-transform duration-500 ease-in-out ${
+              hoveredItem === "bookings" ? "rotate-90" : "rotate-0"
+            }`}
+          >
+            {hoveredItem === "bookings" ? (
+              <ChevronRight className="h-4 w-4 text-neutralGray" />
+            ) : (
+              <ChevronDown className="h-4 w-4 text-neutralGray" />
+            )}
+          </span>
+        </button>
 
-              {/* Dropdown Menu */}
-              <div
-                className={`absolute left-1/2 transform -translate-x-1/2 pt-4 px-2 pb-4 w-52 rounded-xl bg-white transition-opacity duration-300 ${
-                  isHovered ? "opacity-100 visible" : "opacity-0 invisible"
-                }`}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                <a
-                  href="#"
-                  className="block px-6 py-3 text-neutralGray hover:bg-softBlush transition-all duration-200"
-                >
-                  School Talk
-                </a>
-                <a
-                  href="#"
-                  className="block px-6 py-3 text-neutralGray hover:bg-softBlush transition-all duration-200"
-                >
-                  Depression
-                </a>
-                <a
-                  href="#"
-                  className="block px-6 py-3 text-neutralGray hover:bg-softBlush transition-all duration-200"
-                >
-                  Divorce Talks
-                </a>
-                <a
-                  href="#"
-                  className="block px-6 py-3 text-neutralGray hover:bg-softBlush transition-all duration-200"
-                >
-                  Professional Talks
-                </a>
-                <a
-                  href="#"
-                  className="block px-6 py-3 text-neutralGray hover:bg-softBlush transition-all duration-200"
-                >
-                  Relationship
-                </a>
-              </div>
-            </div>
+        {/* Dropdown Menu */}
+        <div
+          className={`absolute left-1/2 transform -translate-x-1/2 pt-4 px-2 pb-4 w-52 rounded-xl transition-opacity duration-300 ${
+            hoveredItem === "bookings" ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+        >
+          <a
+            href="#"
+            className="block px-6 py-3 text-neutralGray hover:bg-softBlush transition-all duration-200"
+          >
+            School Talk
+          </a>
+          <a
+            href="#"
+            className="block px-6 py-3 text-neutralGray hover:bg-softBlush transition-all duration-200"
+          >
+            Depression
+          </a>
+          <a
+            href="#"
+            className="block px-6 py-3 text-neutralGray hover:bg-softBlush transition-all duration-200"
+          >
+            Divorce Talks
+          </a>
+          <a
+            href="#"
+            className="block px-6 py-3 text-neutralGray hover:bg-softBlush transition-all duration-200"
+          >
+            Professional Talks
+          </a>
+          <a
+            href="#"
+            className="block px-6 py-3 text-neutralGray hover:bg-softBlush transition-all duration-200"
+          >
+            Relationship
+          </a>
+        </div>
+      </div>
 
-            <a
-              href="#"
-              className="font-medium text-neutralGray transition-colors duration-200 px-4 py-2 rounded-md hover:bg-softBlush"
-            >
-              Contact
-            </a>
-            <a
-              href="#"
-              className="font-medium text-white bg-primaryPink transition-colors duration-200 px-4 py-2 rounded-3xl hover:bg-mutedCoral"
-            >
-              Sponsor
-            </a>
-          </div>
+      <a
+        href="#"
+        className={`font-medium transition-colors duration-200 ${
+          hoveredItem && hoveredItem !== "contact" ? "opacity-50" : "opacity-100"
+        }`}
+        onMouseEnter={() => handleMouseEnter("contact")}
+        onMouseLeave={handleMouseLeave}
+      >
+        Contact
+      </a>
+      <LuCircleUserRound
+        className={`text-xl ${
+          hoveredItem && hoveredItem !== "userIcon" ? "opacity-100" : "opacity-100"
+        }`}
+        onMouseEnter={() => handleMouseEnter("userIcon")}
+        onMouseLeave={handleMouseLeave}
+      />
+      <a
+        href="#"
+        className={`font-medium text-white bg-primaryCoffee transition-colors duration-200 px-4 py-2 rounded-lg hover:bg-mutedCoral ${
+          hoveredItem && hoveredItem !== "sponsor" ? "opacity-100" : "opacity-100"
+        }`}
+        onMouseEnter={() => handleMouseEnter("sponsor")}
+        onMouseLeave={handleMouseLeave}
+      >
+        Sponsor
+      </a>
+    </div>
 
           {/* Mobile Menu */}
           <div className="lg:hidden">
@@ -210,6 +243,7 @@ const Header = () => {
               >
                 Contact
               </a>
+           
               <a
                 href="#"
                 className="w-fit font-medium text-white bg-primaryPink px-6 py-2 rounded-md transition-colors duration-200 hover:bg-mutedCoral"

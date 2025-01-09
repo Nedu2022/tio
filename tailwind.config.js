@@ -5,7 +5,8 @@ export default {
   ],
   theme: {
     fontFamily: {
-      body: ["Lato", "sans-serif"],
+      body: ["Roboto", "serif"],
+      nun: ["Nunito", "serif"],
       sac: ["Sacramento", "cursive"],
     },
     screens: {
@@ -39,8 +40,8 @@ export default {
         '6xl': '96px',
       },
       colors: {
-        primaryPink: '#F5A19C', // Soft pink
-        primaryBeige: '#F2EDE8', // Beige
+        primaryCoffee: '#2E1F16', // Soft Coffee
+        primaryBeige: '#FFF9F2', // Beige
         accentGold: '#F4C95D',   // Gold
         neutralGray: '#333333',  // Charcoal Gray
         backgroundGray: '#F0F0F0', // Light gray for backgrounds
