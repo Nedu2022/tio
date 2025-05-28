@@ -1,0 +1,61 @@
+{
+    "services": [
+    {
+        "id": 1,
+        "name": "Marriage Counselling",
+        "description": "Marriage counselling is a type of therapy that helps couples improve their relationship and resolve conflicts.",
+        "image": "https://example.com/images/marriage_counselling.jpg",
+        "book": "Book Now"
+    },
+     {
+        "id": 2,
+        "name": "Individual Therapy",
+        "description": "Individual therapy provides a safe space for personal growth and healing through one-on-one sessions with a therapist.",
+        "image": "https://example.com/images/individual_therapy.jpg",
+        "book": "Book Now"
+     },
+        {
+            "id": 3,
+            "name": "Relationship Therapy",
+            "description": "Relationship therapy helps individuals and couples build stronger, healthier relationships through therapy and education",
+            "image": "https://example.com/images/relationship_therapy.jpg",
+            "book": "Book Now"
+        },
+        {
+            "id": 4,
+            "name": "Group Therapy",
+            "description": "Group therapy provides a supportive environment where individuals can share experiences and learn from each other.",
+            "image": "https://example.com/images/group_therapy.jpg",
+            "book": "Book Now"
+        },
+        {
+            "id": 5,
+            "name": "Family Therapy",
+            "description": "Family therapy addresses issues within family dynamics and improves communication among family members.",
+            "image": "https://example.com/images/family_therapy.jpg",
+            "book": "Book Now"
+        },
+        {
+            "id": 6,
+            "name": "Cognitive Behavioral Therapy",
+            "description": "Cognitive Behavioral Therapy (CBT) is a structured, goal-oriented therapy that helps individuals change negative thought patterns.",
+            "image": "https://example.com/images/cbt.jpg",
+            "book": "Book Now"
+        }
+        ,
+        {
+            "id": 7,
+            "name": "Trauma Therapy",
+            "description": "Trauma therapy helps individuals process and heal from traumatic experiences through specialized therapeutic techniques.",
+            "image": "https://example.com/images/trauma_therapy.jpg",
+            "book": "Book Now"
+        },
+        {
+            "id": 8,
+            "name": "Addiction Counseling",
+            "description": "Addiction counseling provides support and strategies for individuals struggling with substance abuse or behavioral addictions.",
+            "image": "https://example.com/images/addiction_counseling.jpg",
+            "book": "Book Now"
+        }
+    ]
+    }
