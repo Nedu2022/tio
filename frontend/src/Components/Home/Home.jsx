@@ -1,6 +1,9 @@
 import Header from "../Header/Header";
 import mainImg from "../../assets/calm.jpg";
 import Content from "../Content/Content";
+import About from "../About/About";
+import Appoint from "../Appointment/appoint";
+
 
 const Home = () => {
   return (
@@ -30,6 +33,8 @@ const Home = () => {
       </div>
 
       <Content />
+      <About />
+      <Appoint/>
     </div>
   );
 };
