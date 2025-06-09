@@ -5,9 +5,7 @@ export default {
   ],
   theme: {
     fontFamily: {
-      body: ["Roboto", "serif"],
-      nun: ["Nunito", "serif"],
-      sac: ["Sacramento", "cursive"],
+      body: ["Sora", "serif"],
     },
     screens: {
         sm: "640px",  // Small screens (mobile)
@@ -43,7 +41,7 @@ export default {
         primaryCoffee: '#2E1F16', // Soft Coffee
         primaryBeige: '#FFF9F2', // Beige
         accentGold: '#F4C95D',   // Gold
-        neutralGray: '#333333',  // Charcoal Gray
+        neutralGray: '#292725',  // Charcoal Gray
         backgroundGray: '#F0F0F0', // Light gray for backgrounds
         white: '#FFFFFF',        // White for text or highlights
         softBlush: '#F8D7DA',    // Light pink for subtle highlights

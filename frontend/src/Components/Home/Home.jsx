@@ -1,25 +1,27 @@
 import Header from "../Header/Header";
 import mainImg from "../../assets/calm.jpg";
-import Content from "../Content/Content";
 import About from "../About/About";
-import Appoint from "../Appointment/appoint";
+import Services from "../ServiceComponent/Services";
+import FAQ from "../FAQs/FAQ";
 import { LuDot } from "react-icons/lu";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
+import Contact from "../Contact/Contact";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
-    <div className="relative">
+    <div className="flex flex-col ">
       <Header />
 
-      <div className="h-screen relative">
+      <div className="relative flex-grow z-10 h-screen">
         <img
           src={mainImg}
           alt="Background"
-          className="w-full h-full object-cover"
+          className="w-full h-screen object-cover inset-0"
         />
 
-        <div className="absolute inset-0 flex items-center justify-end px-4 sm:px-8 md:px-16 z-10">
-          <div className="text-white text-right w-full">
+        <div className="absolute inset-0 flex items-center justify-end bg-neutralGray bg-opacity-50  px-4 sm:px-8 md:px-16 z-10">
+          <div className="text-white text-right ">
             <span className="flex items-center justify-end mb-6 leading-tight font-nun">
               <LuDot className="text-xl" />
               <h1>WELCOME TO TIO</h1>
@@ -31,8 +33,7 @@ const Home = () => {
             </h1>
             <p>
               Are you passionate about helping others on their mental health
-              journey? <br />
-              Join our dedicated team of compassionate professionals.
+              journey? Join our dedicated team of compassionate professionals.
             </p>
             <button className="flip-hover mt-10">
               <span className="flip-text"> Book an Appointment</span>
@@ -40,32 +41,37 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="border-t-[0.5px] border-softBlush absolute bottom-0 left-1/2 transform -translate-x-1/2 min-w-[1200px] max-w-max flex justify-center items-center gap-24 px-4 py-10 ">
-          <span className="flex items-center gap-2 text-white">
-            <IoCheckmarkCircleOutline className="text-xl" />
-            <p>Individual Counselling</p>
-          </span>
+        <div className="border-t border-softBlush absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full px-4 py-6 max-w-screen-xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm text-white">
+            <div className="flex items-center gap-2">
+              <IoCheckmarkCircleOutline className="text-sm" />
+              <p>Individual Counselling</p>
+            </div>
 
-          <span className="flex items-center gap-2 text-white">
-            <IoCheckmarkCircleOutline className="text-xl" />
-            <p>Group Therapy</p>
-          </span>
+            <div className="flex items-center gap-2">
+              <IoCheckmarkCircleOutline className="text-sm" />
+              <p>Couple Counselling</p>
+            </div>
 
-          <span className="flex items-center gap-2 text-white">
-            <IoCheckmarkCircleOutline className="text-xl" />
-            <p>Psychiatric Help</p>
-          </span>
+            <div className="flex items-center gap-2">
+              <IoCheckmarkCircleOutline className="text-sm" />
+              <p>Child Counselling</p>
+            </div>
 
-          <span className="flex items-center gap-2 text-white">
-            <IoCheckmarkCircleOutline className="text-xl" />
-            <p>Online Support</p>
-          </span>
+            <div className="flex items-center gap-2">
+              <IoCheckmarkCircleOutline className="text-sm" />
+              <p>Family Counselling</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <Content />
       <About />
-      <Appoint />
+      <Services />
+      <FAQ />
+
+      <Contact />
+      <Footer />
     </div>
   );
 };

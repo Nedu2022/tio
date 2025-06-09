@@ -4,58 +4,66 @@
         "id": 1,
         "name": "Marriage Counselling",
         "description": "Marriage counselling is a type of therapy that helps couples improve their relationship and resolve conflicts.",
-        "image": "https://example.com/images/marriage_counselling.jpg",
+        "image": "./src/assets/calm.jpg",
         "book": "Book Now"
     },
      {
         "id": 2,
         "name": "Individual Therapy",
         "description": "Individual therapy provides a safe space for personal growth and healing through one-on-one sessions with a therapist.",
-        "image": "https://example.com/images/individual_therapy.jpg",
+        "image": "./src/assets/depression.jpg",
         "book": "Book Now"
      },
         {
             "id": 3,
             "name": "Relationship Therapy",
             "description": "Relationship therapy helps individuals and couples build stronger, healthier relationships through therapy and education",
-            "image": "https://example.com/images/relationship_therapy.jpg",
+            "image": "./src/assets/depression.jpg",
             "book": "Book Now"
         },
         {
             "id": 4,
             "name": "Group Therapy",
             "description": "Group therapy provides a supportive environment where individuals can share experiences and learn from each other.",
-            "image": "https://example.com/images/group_therapy.jpg",
+            "image": "./src/assets/depression.jpg",
             "book": "Book Now"
         },
         {
             "id": 5,
             "name": "Family Therapy",
             "description": "Family therapy addresses issues within family dynamics and improves communication among family members.",
-            "image": "https://example.com/images/family_therapy.jpg",
+           "image": "./src/assets/depression.jpg",
             "book": "Book Now"
         },
         {
             "id": 6,
             "name": "Cognitive Behavioral Therapy",
             "description": "Cognitive Behavioral Therapy (CBT) is a structured, goal-oriented therapy that helps individuals change negative thought patterns.",
-            "image": "https://example.com/images/cbt.jpg",
+            "image": "./src/assets/depression.jpg",
             "book": "Book Now"
         }
-        ,
-        {
-            "id": 7,
-            "name": "Trauma Therapy",
-            "description": "Trauma therapy helps individuals process and heal from traumatic experiences through specialized therapeutic techniques.",
-            "image": "https://example.com/images/trauma_therapy.jpg",
-            "book": "Book Now"
-        },
-        {
-            "id": 8,
-            "name": "Addiction Counseling",
-            "description": "Addiction counseling provides support and strategies for individuals struggling with substance abuse or behavioral addictions.",
-            "image": "https://example.com/images/addiction_counseling.jpg",
-            "book": "Book Now"
-        }
-    ]
+    ],
+
+"faqs": [
+      {
+    "question": "What is mental therapy, and how can it help me?",
+    "answer": "Mental therapy helps you deal with emotional and mental health challenges by working with a licensed therapist."
+  },
+  {
+    "question": "What if I don't feel a connection with my therapist?",
+    "answer": "It’s okay to try another therapist. Feeling safe and understood is key to good therapy."
+  },
+  {
+    "question": "What should I expect in my first session?",
+    "answer": "You'll talk about your concerns, history, and what you hope to achieve through therapy."
+  },
+  {
+    "question": "Will therapy be covered by my insurance?",
+    "answer": "Most insurance plans cover therapy, but you should check with your provider first."
+  },
+  {
+    "question": "How long does therapy usually take?",
+    "answer": "It varies! Some people go for a few weeks, others for months depending on their needs."
+  }
+]
     }
