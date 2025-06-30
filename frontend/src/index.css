@@ -51,3 +51,125 @@ input:-webkit-autofill {
   @apply text-black;
 }
 
+@keyframes rotateImages {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(-15deg);
+  }
+  5% {
+    opacity: 1;
+    transform: scale(1.1) rotate(5deg);
+  }
+  10% {
+    transform: scale(1) rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  33% {
+    opacity: 0;
+    transform: scale(0.8) rotate(15deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8) rotate(15deg);
+  }
+}
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+abbr[title] {
+  text-decoration: none !important;
+  -webkit-text-decoration: none !important;
+}
+
+/* In your global styles or index.css */
+.react-calendar {
+  background-color: transparent;
+  font-family: 'Inter', sans-serif;
+  border: none !important;
+  color: black !important;
+}
+
+.react-calendar__navigation button:disabled {
+  background-color: transparent !important;
+  cursor: default;
+}
+
+.react-calendar__tile--active {
+  background-color: #2563eb !important; 
+  color: white !important;
+  border-radius: 8px;
+}
+
+.react-calendar__tile--now {
+
+  border-radius: 8px;
+}
+
+.react-calendar__navigation {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.react-calendar__navigation button {
+  background-color: none !important;
+}
+
+.react-calendar__month-view__weekdays{
+  color: black;
+  text-decoration: none !important;
+}
+
+.react-calendar__navigation__next-button {
+  background-color: #ECF2FF !important;
+  border-radius: none !important;
+  box-shadow: none !important;
+}
+
+.react-calendar__navigation__next-button:hover {
+background-color: #dbe6ff !important;
+}
+
+.react-calendar__navigation__prev-button {
+  background-color: #ECF2FF !important;
+  box-shadow: none !important;
+}
+
+.react-calendar__navigation__prev-button:hover {
+background-color: #dbe6ff !important;
+}
+
+.react-calendar__navigation__label{
+    flex-grow: 0 !important;
+}
+
+.react-calendar__navigation__arrow {
+  background-color: #ECF2FF !important;
+  border-radius: 50% !important;
+  box-shadow: none !important;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #2563eb;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+}
+
+
+.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button{
+  display: none;
+}
+.react-calendar__navigation__arrow.react-calendar__navigation__next2-button{
+  display: none;
+}
