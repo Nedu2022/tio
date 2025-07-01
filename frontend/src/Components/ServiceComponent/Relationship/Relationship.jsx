@@ -1,5 +1,5 @@
 import Header from "../../Header/Header";
-import Eduvideo from "../../../assets/Education.mp4";
+import Relvideo from "../../../assets/relationship.mp4";
 import { IoMdArrowDropright } from "react-icons/io";
 import Footer from "../../Footer/Footer";
 import TruamaBanner from "../../../assets/banner-one-shape-1.png";
@@ -45,7 +45,7 @@ export default function RelationshipBookingPage() {
             preload="auto"
             onContextMenu={(e) => e.preventDefault()}
           >
-            <source src={Eduvideo} type="video/mp4" />
+            <source src={Relvideo} type="video/mp4" />
           </video>
 
           <div className="absolute flex flex-col justify-center inset-0 bg-gradient-to-br from-black/80 to-transparent lg:rounded-3xl pointer-events-none">

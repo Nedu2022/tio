@@ -1,5 +1,5 @@
 import Header from "../../Header/Header";
-import Eduvideo from "../../../assets/Education.mp4";
+import Famvideo from "../../../assets/family.mp4";
 import { IoMdArrowDropright } from "react-icons/io";
 import Footer from "../../Footer/Footer";
 import TruamaBanner from "../../../assets/banner-one-shape-1.png";
@@ -45,16 +45,16 @@ export default function FamilyBookingPage() {
             preload="auto"
             onContextMenu={(e) => e.preventDefault()}
           >
-            <source src={Eduvideo} type="video/mp4" />
+            <source src={Famvideo} type="video/mp4" />
           </video>
 
-          <div className="absolute flex flex-col justify-center inset-0 bg-gradient-to-br from-black/80 to-transparent pointer-events-none">
+          <div className="absolute flex flex-col justify-center inset-0 bg-gradient-to-br from-black/80 to-transparent lg:rounded-3xl pointer-events-none">
             <h1 className="text-white items-center justify-center flex text-lg lg:text-3xl">
               &quot;Having a Broken Relationship?&quot;
             </h1>
             <p className="items-center justify-center flex text-white uppercase">
               Services <IoMdArrowDropright />
-              <span>Family Psycology</span>
+             <span>Self Esteem Issues</span>
             </p>
           </div>
         </div>

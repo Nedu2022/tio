@@ -3,7 +3,7 @@ export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      body: ["Sora", "serif"]
+      body: ["Lexend", "serif"]
     },
     screens: {
       sm: "640px", // Small screens (mobile)

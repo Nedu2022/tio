@@ -1,119 +1,64 @@
-import { Link, useLocation } from "react-router-dom";
-import { HiMenu, HiX } from "react-icons/hi";
-import { useEffect, useState } from "react";
+import { FaTwitter, FaFacebookF, FaPinterestP, FaInstagram } from "react-icons/fa";
+import { FiSearch, FiShoppingCart } from "react-icons/fi";
 
-// eslint-disable-next-line react/prop-types
-const Header = ({ className = "" }) => {
-  const location = useLocation();
-  const isHome = location.pathname === "/";
-  const [isScroll, setIsScroll] = useState(false);
-  const [isOpen, setisOpen] = useState(false);
-  const toggleMenu = () => setisOpen(!isOpen);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScroll(window.scrollY > 1);
-    };
-
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.addEventListener("scroll", handleScroll);
-  }, []);
-
+const DelogisHeader = () => {
   return (
-    <header
-      className={`fixed bg-red-700 top-0 left-0 w-full z-20 px-4 lg:mx-0 sm:px-8 md:px-16 py-4 flex justify-between xl:justify-around items-center border-b-[0.5px] border-softBlush transition-colors duration-500
-      text-primaryCoffee
-      ${
-        isHome
-          ? isScroll
-            ? "bg-white text-primaryCoffee"
-            : "bg-transparent text-primaryCoffee"
-          : "bg-white text-primaryCoffee"
-      }
-      ${className}`}
-    >
-      <h1 className="text-lg md:text-xl font-bold font-nun tracking-wide transition-colors duration-500">
-        <span className="">T</span>IO
-      </h1>
+    <div className="flex w-full">
 
-      <nav className="hidden lg:flex items-center space-x-4 md:space-x-8 font-medium">
-        <Link to="/" className="hover:underline transition-colors duration-500">
-          Home
-        </Link>
-        <Link
-          to="/about"
-          className="hover:underline transition-colors duration-500"
-        >
-          About
-        </Link>
-        <Link
-          to="/services"
-          className="hover:underline  transition-colors duration-500"
-        >
-          Book a Session
-        </Link>
-        <Link
-          to="/services"
-          className="hover:underline transition-colors duration-500"
-        >
-          Services
-        </Link>
-      </nav>
+      {/* LEFT SECTION */}
+      <div className="bg-[#F4EFEC] flex items-center justify-between px-4 md:px-6 lg:px-8 py-3 w-[25%] min-w-fit rounded-l-lg">
+        <div className="flex items-center gap-3">
+          <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
+          <div className="leading-tight">
+            <h1 className="text-xl font-bold text-[#1e1e1e]">Delogis</h1>
+            <p className="text-xs text-gray-500">Psychology & Counseling</p>
+          </div>
+        </div>
+      </div>
 
-      <button className="flip-hover lg:flex hidden">
-        <span className="flip-text"> Book A Session</span>
-      </button>
-      <button onClick={toggleMenu} className="md:hidden text-2xl z-50">
-        {isOpen ? <HiX /> : <HiMenu />}
-      </button>
+      {/* MIDDLE SECTION */}
+      <div className="bg-white px-6 md:px-12 py-3 w-full flex justify-between items-center rounded-none">
+        {/* NAV */}
+        <nav className="flex items-center gap-6 font-medium text-gray-700 text-base">
+          <a href="/" className="hover:text-primary transition">Home</a>
+          <a href="/about" className="hover:text-primary transition">About</a>
+          <a href="/services" className="hover:text-primary transition">Services</a>
+          <a href="/cases" className="hover:text-primary transition">Cases</a>
+          <a href="/contact" className="hover:text-primary transition">Contact</a>
+          <a href="/blog" className="hover:text-primary transition">Blog</a>
+        </nav>
 
-      <nav
-        className={`lg:hidden overflow-hidden space-y-10 pl-4 pt-10 flex flex-col h-screen fixed top-0 left-0 w-3/4 max-w-xs bg-black ${className} transform transition-transform duration-700 ease-in-out z-40 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <h1 className="text-lg md:text-xl font-bold font-nun tracking-wide ">
-          <span className="text-softBlush">T</span>IO
-        </h1>
-        <Link
-          to="/"
-          className="hover:underline hover:text-pink-400 transition-colors duration-200"
-        >
-          Home
-        </Link>
-        <Link
-          to="/about"
-          className="hover:underline hover:text-pink-400 transition-colors duration-200"
-        >
-          About
-        </Link>
-        <Link
-          to="/services"
-          className="hover:underline hover:text-pink-400 transition-colors duration-200"
-        >
-          Book a Session
-        </Link>
-        <Link
-          to="/services"
-          className="hover:underline hover:text-pink-400 transition-colors duration-200"
-        >
-          Resources
-        </Link>
-        <Link
-          to="/contact"
-          className="hover:underline hover:text-pink-400 transition-colors duration-200"
-        >
-          FAQ
-        </Link>
+        {/* ICONS */}
+        <div className="flex items-center gap-4">
+          <span className="w-px h-6 bg-[#D4B0A3]"></span>
+          <FiSearch className="text-xl text-gray-700 cursor-pointer hover:opacity-70" />
+          <FiShoppingCart className="text-xl text-gray-700 cursor-pointer hover:opacity-70" />
+        </div>
+      </div>
 
-        <button className="flip-hover w-fit lg:hidden">
-          <span className="flip-text"> Book an Appointment</span>
-        </button>
-      </nav>
-    </header>
+      {/* RIGHT SECTION */}
+      <div className="flex items-center bg-[#5B3B2E] text-white px-4 py-3 gap-3 rounded-r-lg">
+        {/* SOCIALS */}
+        <div className="flex items-center gap-3">
+          <FaTwitter className="cursor-pointer hover:opacity-80" />
+          <FaFacebookF className="cursor-pointer hover:opacity-80" />
+          <FaPinterestP className="cursor-pointer hover:opacity-80" />
+          <FaInstagram className="cursor-pointer hover:opacity-80" />
+        </div>
+
+        {/* Divider */}
+        <div className="h-full w-px bg-white mx-3"></div>
+
+        {/* BUTTON */}
+        <div className="bg-[#1C1411] px-4 py-2 rounded-md relative">
+          <button className="font-bold text-sm whitespace-nowrap">
+            Make an Appointment
+          </button>
+          <div className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 border-2 border-[#C6977F] rounded-full"></div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default Header;
+export default DelogisHeader;
